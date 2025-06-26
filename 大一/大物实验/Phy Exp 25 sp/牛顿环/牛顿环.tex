@@ -1,0 +1,220 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+
+
+
+
+%设置页边距
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\usepackage{wrapfig}
+
+
+
+%需要用到的扩展包
+\usepackage{xeCJK,amsmath,paralist,enumerate,booktabs,multirow,graphicx,float,subfig,setspace,listings,lastpage,hyperref}
+\usepackage{fancyhdr}
+
+
+
+%设置页眉页脚以及页码
+\pagestyle{fancy}
+\rhead{牛顿环}
+\lhead{大学基础物理实验报告}
+\rfoot{2025年5月20日}
+
+
+
+
+%报告中用到的图片存放在这个tex文件所在目录中的figures子目录中
+\graphicspath{{figures/}}
+
+
+
+
+
+
+
+
+
+%报告开始
+\begin{document}
+	
+	
+	
+	
+	%设置课程标题
+	\begin{center}
+		\heiti\LARGE{《大学基础物理实验》课程实验报告}
+	\end{center}
+	
+	
+	
+	
+	%设置实验人信息以及实验时间表格
+	
+	
+		\begin{center}
+			\begin{tabular}{lcr}
+				
+				{\songti 姓名：柯云超  \quad 学号: 2413575}\\
+				{\songti  学院：计算机学院 \quad 时间：2025年5月20日 \quad 组别: L组11号}\\
+				
+				
+			\end{tabular}
+		\end{center}
+	\vspace{-0.2cm}
+	{\noindent}	 \rule[-10pt]{16cm}{0.05em}\\
+
+	\vspace{-0.4cm}
+	
+	
+	
+	
+	
+	
+	%实验题目
+	\begin{center}
+		\LARGE\textbf{牛顿环}
+	\end{center}
+	
+	
+	\subsection*{[实验目的]}
+    \par 1.观察等厚干涉现象，并利用等厚干涉测量凸透镜表面的曲率半径。
+    \par 2.了解读数显微镜的使用方法。
+
+	\subsection*{[实验器材]}
+	\par 牛顿环装置，钠灯，读数显微镜
+\subsection*{[实验原理]}
+\subsubsection*{牛顿环原理}
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{牛顿环.png}
+	\caption{牛顿环原理}
+\end{figure}
+\subsubsection*{测量原理}
+\par 在图1中，$R$为待测透镜凸面的曲率半径，$r_k$是第k级干涉环的半径，$d_k$是第k级干涉环所对应的空气间隙的厚度。如果入射光的波长为$\lambda$，则第k级干涉环所对应的光程差为
+\[
+	\Delta_k = 2d_k+\frac{\lambda}{2}
+\]
+\clearpage
+\par 其中,$\dfrac{\lambda}{2}$为光由光疏介质入射到光密介质时，反射光的半波损失。因此，在接触点处($d_0$=0)的光程差为
+\[
+	\Delta_0 = \frac{\lambda}{2}
+\]
+\par 在理想情况下，牛顿环的中心是一个几何暗点。但在实际情况中，透镜和平板玻璃接触时，由于有重力和压力存在，透镜的凸面和平板玻璃均发生形变，两者的接触不再是点接触，而是面接触。因此，牛顿环的零级暗条纹不是个点，而是一个较大的暗斑。
+\par 第$k$级干涉暗环处的光程差为
+\[
+	\Delta_k = 2d_k+\frac{\lambda}{2} = (k+\frac{1}{2})\lambda
+\]
+\par 所对应的空气间隙的厚度为
+\[
+	d_k = k\frac{\lambda}{2}
+\]
+\par 由于$R\gg d_k$,所以有
+\[
+	r_k^2 = R^2-(R-d_k)^2 \approx 2Rd_x
+\]
+\par 可知第$k$级别的干涉暗环的半径为
+\[
+	r_k = \sqrt{k\lambda R}
+\]
+\par 但是在实际测量中，无法确定干涉环圆心的位置，但是可以获得弦长
+\[
+	l_k^2 = 4(r_k^2-s^2)
+\]
+\par 代入之前的公式，得到
+\[
+	l_k^2 = 4k\lambda R-4s^2
+\]
+\par 为了得到斜率求出$R$,测量不同数据利用最小二乘法计算出斜率。
+\subsection*{[实验内容]}
+\subsubsection*{调节牛顿环装置}
+\par 1.点燃钠灯，几分钟后它将发出明亮的黄光。调节半透半反镜的倾角和左右方向，使显微镜的视场达到最亮。 
+\par 2.调节显微镜的目镜，使自己能够清楚地看到叉丝。对显微镜进行调焦。调焦时，显微镜筒应自下而上缓慢地上升，直到看清楚干涉条纹时为止，往下移动显微镜筒时，眼睛一定要离开目镜侧视，防止镜筒压坏牛顿环。 
+\par 3.找到干涉纹，并尽量使叉丝与干涉环的中心重合。 
+\par 4.测量不同级次干涉环的弦长。测量时应测量较高级次的干涉环，这样可以避免中心部分有形变带来的测量误差。 
+\par 5.测量牛顿环细节问题 
+\par 6.转动鼓轮。先使镜筒向左移动，顺序数到50 环，再向右转到45 环，使叉丝尽量对准干涉条纹的中心，记录读数。然后继续转动测微鼓轮，使叉丝依次与40，35，30，25，20，15，10环对准，顺次记下读数；再继续转动测微鼓轮，使叉丝依次与圆心右边10，15，20，25，30，35，40，45环对准，也顺次记下各环的读数。注意在一次测量过程中，测微鼓轮应沿一个方向旋转，中途不得反转，以免引起回程差。 
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{牛顿环.jpg}
+	\caption{牛顿环图片}
+\end{figure}
+
+\subsection*{[数据处理]}
+\par 光源波长:589.3nm
+\subsubsection*{原始数据}
+\begin{table}[!htbp]
+    \centering
+    \scriptsize % 使用极小字体
+    \setlength{\tabcolsep}{5pt} % 缩小列间距
+	\begin{tabular}{|ccc|c|c|c|c|c|c|c|c|}
+	\hline
+	\multicolumn{3}{|c|}{干涉级数}                           
+             & 10     & 15     & 20     & 25     & 30     & 35    & 40  & 45  \\ \hline
+	\multicolumn{2}{|c|}{\multirow{2}{*}{干涉位置}} & 左       & 26.125 & 26.643 & 27.100 & 27.488 & 27.849 & 28.178 & 28.475& 28.778  \\ \cline{3-11} 
+	\multicolumn{2}{|c|}{}                      & 右       & 21.002 & 20.472 & 20.028 & 19.555 & 19.198 & 18.868 & 18.539 & 18.215   \\ \hline
+	\multicolumn{3}{|c|}{弦长}                             & 5.123 & 6.171  & 7.072  & 7.933  & 8.651  & 9.310  & 9.936  & 10.563 \\ \hline
+	\multicolumn{3}{|c|}{弦长平方}                           & 26.24513 & 38.08124 & 50.01318 & 62.93249 & 74.83980 & 86.67610 & 98.72410 & 111.57697 \\ \hline
+	\end{tabular}
+    \caption{实验数据记录表(单位:$mm$)}
+\end{table}
+
+\subsubsection*{使用最小二乘法处理数据}
+\[
+	l_k^2 = 4k\lambda R-4s^2
+\]
+\par 目的:求出直线斜率$4\lambda R$
+\[
+\begin{cases}
+\sum_{i = 1}^{n}y_{i}=na + b\sum_{i = 1}^{n}x_{i}\\
+\sum_{i = 1}^{n}x_{i}y_{i}=a\sum_{i = 1}^{n}x_{i}+b\sum_{i = 1}^{n}x_{i}^{2}
+\end{cases}
+\]
+引入平均值：
+\[
+\bar{x}=\frac{1}{n}\sum_{i = 1}^{n}x_{i},\quad \bar{y}=\frac{1}{n}\sum_{i = 1}^{n}y_{i}
+\]
+\[
+\overline{x^{2}}=\frac{1}{n}\sum_{i = 1}^{n}x_{i}^{2},\quad \overline{xy}=\frac{1}{n}\sum_{i = 1}^{n}x_{i}y_{i}
+\]
+则有：
+\[
+\bar{y}=a + b\bar{x},\quad n\overline{xy}=na\bar{x}+nb\overline{x^{2}}
+\]
+解方程组：
+\[
+\begin{cases}
+\bar{y}=a + b\bar{x}\\
+\overline{xy}=a\bar{x}+b\overline{x^{2}}
+\end{cases}
+\]
+得：
+\[
+b = \frac{\overline{xy}-\bar{x}\cdot\bar{y}}{\overline{x^{2}}-\bar{x}^{2}},\quad a=\bar{y}-b\bar{x}
+\]
+相关系数：
+\[
+r=\frac{(\overline{xy}-\bar{x}\cdot\bar{y})}{\sqrt{(\overline{x^{2}}-\bar{x}^{2})(\overline{y^{2}}-\bar{y}^{2})}},\quad r\in[-1,1]
+\] 
+解得：
+\[b = 2.43436, r = 0.99994\]
+则：
+\[R = \frac{b}{4\lambda} = \frac{2.43436}{4 \times 589.3 \times 10^{-6}} = 1032.73mm\]
+
+
+\subsection*{[考察题]}
+\subsubsection*{第一题}
+\par 因为不能保证叉丝移动轨迹刚好经过圆心，故无法准确测量干涉环半径，因此使用此式计算误差较大。 只能通过弦长的公式来计算。
+\subsubsection*{第二题}
+\par 先往一个方向移动超过需要测量的距离更多的距离，这样子再往回移动的过程中就可以先移动一段距离然后再测量。在测量各干涉环的直径时，只可沿同一个方向旋转鼓轮，不能进进退退，以避免测微螺距间隙引起的回程误差。
+\subsubsection*{第三题}
+\par 1. 低级次条纹容易受到牛顿环装置接触面的灰尘、形变等影响，往往不呈比较理想的圆环形。
+\par 2. 低级次条纹比较粗不利于准确测量。
+\par 3.测量较低级次时不能有效避免中心部分形变带来的测量误差，且读数误差较大。
+\subsubsection*{第四题}
+\par 显微镜视场达到最亮说明反射光与透射光重合，此时更容易找到牛顿环。
+\subsubsection*{第五题}
+\par 1.测量时应先向左数50级次，然后从45级次开始测量，向右移动并计数，按级次从大到小再变大测量.测量时鼓轮必须朝一个方向转动：
+\par 2.45到5级次记录暗环外圈数值，5到45级次记录内圈数值，这样就能得到相对准确的弦长值。
+\end{document}

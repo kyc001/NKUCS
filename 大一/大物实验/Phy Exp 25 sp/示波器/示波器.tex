@@ -1,0 +1,171 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+
+
+
+
+%设置页边距
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+
+
+
+%需要用到的扩展包
+\usepackage{xeCJK,amsmath,paralist,enumerate,booktabs,multirow,graphicx,float,subfig,setspace,listings,lastpage,hyperref}
+\usepackage{fancyhdr}
+
+
+
+
+%设置页眉页脚以及页码
+\pagestyle{fancy}
+\rhead{示波器的使用}
+\lhead{大学基础物理实验报告}
+\rfoot{2025 年 4 月 1 日}
+
+
+
+
+%报告中用到的图片存放在这个tex文件所在目录中的figures子目录中
+\graphicspath{{figures/}}
+
+
+
+
+
+
+
+
+
+%报告开始
+\begin{document}
+	
+	
+	
+	
+	%设置课程标题
+	\begin{center}
+		\heiti\LARGE{《大学基础物理实验》课程实验报告}
+	\end{center}
+	
+	
+	
+	
+	%设置实验人信息以及实验时间表格
+	
+	
+		\begin{center}
+			\begin{tabular}{lcr}
+				
+				{\songti 姓名：柯云超  \quad 学号: 2413575}\\
+				{\songti  学院：计算机学院 \quad 时间：2025年4月1日 \quad 组别: L组11号}\\
+				
+				
+			\end{tabular}
+		\end{center}
+	\vspace{-0.2cm}
+	{\noindent}	 \rule[-10pt]{16cm}{0.05em}\\
+
+	\vspace{-0.4cm}
+	
+	
+	
+	
+	
+	
+	%实验题目
+	\begin{center}
+		\LARGE\textbf{示波器的使用}
+	\end{center}
+	
+	
+	
+	%实验原理
+	\subsection*{[仪器与用具]}
+	\par 1.1仪器品牌与型号：
+	\par 示波器：普源DS1102E，信号发生器：F05函数发生器
+	\par 1.2电阻阻值：1k$\Omega$，电容值：0.1$\mu F$
+	
+	\subsection*{[基本使用]}
+	\par 将信号源($1KHz,3Vp-p$)和变压器电压同时输出到示波器，分别稳定并显示适当的波形。重点熟悉触发对波形的作用。
+
+	\subsection*{[实验原理]}
+        \par 示波器: CRT,亦称阴极射线管，把待测电信号变成发光的图形
+        \par 波形显示的基本原理: Y偏转板加$u_y$, 在X偏转板添加锯齿波电压，随时间线性添加到最大值，然后突然回到最小，此后再重复地变化。
+        \par 波形稳定的条件: $T_x = nT_y$.
+
+	\subsection*{[实验内容及步骤]}
+        \par 1.将信号发生器信号（频率约 1$kHz$，电压峰-峰值约3V）和市电小电压信号（频率约 50 Hz，电压峰 - 峰值约 6 V）同时接到示波器 CH1 和 CH2 接口，分别在示波器屏幕上调节出稳定的波形，熟悉触发对波形的作用。
+
+        \par 2.根据示波器类型，采用自动测量、手动光标测量，或直接读格数等三种方法，测量上述两个信号的电压峰 - 峰值和频率。
+        \par 3.以信号源频率为已知，利用李萨如图形测量市电频率。
+        \par 4.连接 RC 电路，用双踪显示法和李萨如图法测量该电路输入弦信号 $u_1$ 和输出信号 $u_2$ 之间的相位差，CH1 接 $u_1$ 信号，CH2 接 $u_2$ 信号。信号频率取 f = 1.59 kHz，电容 C = 0.1 μF，电阻 R = 1 kΩ。
+    
+	\subsection*{[实验数据]}
+	\subsubsection*{信号源和变压器测量}
+	\begin{table}[!htbp]
+		\centering
+	\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+		\hline
+		\rule{0pt}{16pt} 信号源 & 自动测量 & 光标测量 & 读格测量 \\ \hline
+		\rule{0pt}{16pt} 电压  & 3.10V & 3.12V&3.00V\\ \hline
+		\rule{0pt}{16pt} 周期  & 1.004ms  & 1.01ms & 1ms\\ \hline
+		\rule{0pt}{16pt} 频率  & 996.01Hz  & 990.09Hz &1000Hz \\ \hline
+
+	\end{tabular}
+    		\caption{实验测量数据}
+
+\end{table}
+
+\par 实验图片如下:
+            \begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{figures/自动测量.jpg}
+		\caption{自动测量}
+            \end{figure}
+
+            \begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{figures/光标测量电压.jpg}
+		\caption{光标测量电压}
+            \end{figure}
+
+            \begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{figures/光标测量周期.jpg}
+		\caption{光标测量周期}
+            \end{figure}
+            
+	\subsubsection*{李萨如图形测量法}
+        \par 在测量图形前，应该分别将CH1和CH2信号调到稳定，图像大小差不多后再将时基切换至 X-Y 模式。
+	\begin{table}[!htbp]
+		\centering 
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			\rule{0pt}{20pt}$\frac{\mbox{与水平线的交点数}}{\mbox{与竖直线交点数}}=\frac{n_x}{n_y}$    & 1:1 & 1:2 & 1:3 & 2:3  \\ \hline
+			\rule{0pt}{20pt}函数发生器频率 & 50.02 & 100.06 & 150.10 & 75.05   \\ \hline
+			\rule{0pt}{20pt}算出的市电频率 &  50.02& 50.03 & 50.03 &50.03 \\ \hline
+		\end{tabular}
+            \caption{李萨如图形数据}
+	\end{table}
+	\par 计算得到平均市电频率为50.03Hz.
+	\subsection*{[测量RC电路的相位差]}
+	\par 连接电路，将信号发生器频率设定为$f=1.59kHz$
+	\subsubsection*{椭圆法}
+	$$
+	|\theta|=\arcsin\frac{2x_0}{2x_m}=\arcsin\frac{2.00}{3.02}\approx0.72
+	$$
+	\subsubsection*{位移法}
+	\[
+	\theta = \frac{l}{l_0}\times 2\pi = \frac{76.0}{628}\times 2\pi\approx0.76
+	\]
+
+	\subsubsection*{[思考题]}
+	\par 无
+	
+	
+	
+	
+	
+	
+\end{document}

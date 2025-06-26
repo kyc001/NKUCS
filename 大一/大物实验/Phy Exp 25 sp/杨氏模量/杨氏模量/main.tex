@@ -1,0 +1,231 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+%设置页边距
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\usepackage{wrapfig}
+%需要用到的扩展包
+\usepackage{xeCJK,amsmath,paralist,enumerate,booktabs,multirow,graphicx,float,subfig,setspace,listings,lastpage,hyperref}
+\usepackage{fancyhdr}
+\usepackage{siunitx}
+
+\pagestyle{fancy}
+\rhead{伸长法测量金属丝杨氏模量}
+\lhead{大学基础物理实验报告}
+\rfoot{2025年6月10日}
+
+
+\begin{document}
+	%设置课程标题
+	\begin{center}
+		\heiti\LARGE{《大学基础物理实验》课程实验报告}
+	\end{center}
+	
+	
+	
+	
+	%设置实验人信息以及实验时间表格
+	
+	
+		\begin{center}
+			\begin{tabular}{lcr}
+				
+				{\songti 姓名：柯云超  \quad 学号: 2413575}\\
+				{\songti  学院：计算机学院 \quad 时间：2025年6月10日 \quad 组别: L组11号}\\
+				
+				
+			\end{tabular}
+		\end{center}
+	\vspace{-0.2cm}
+	{\noindent}	 \rule[-10pt]{16cm}{0.05em}\\
+
+	\vspace{-0.4cm}
+
+
+	%实验题目
+	\begin{center}
+		\LARGE\textbf{伸长法测量金属丝杨氏模量}
+	\end{center}
+	
+	
+\subsection*{[实验目的]}
+
+	\par 1.用伸长法测定金属丝的杨氏模量。
+	\par 2.了解望远镜尺组的结构及使用方法。
+	\par 3.掌握用光杠杆放大原理测量微小长度变化量的方法。
+	\par 4.学习用对立影响法消除系统误差的思想方法。
+	\par 5.学习用环差法处理数据。
+
+\subsection*{[实验仪器]}
+
+ B款杨氏模量测定仪；螺旋测微器；游标卡尺；钢卷尺.
+
+  
+\subsection*{[实验原理简述]}
+
+\subsubsection*{杨氏模量表达式}
+	\par 金属丝长为$L$、截面积为S,在长度方向上施加作用力$F$使其伸长$\Delta L$\\
+	 由胡克定律：
+	 \begin{equation}
+	 	\frac{F}{S}=E\frac{\Delta L}{L}
+	 \end{equation}
+	
+	\par $(1)$式中$\dfrac{F}{S}$为\textbf{正应力}，$\dfrac{\Delta L}{L}$为金属丝\textbf{相对伸长量},$E$为所求\textbf{杨氏模量}。\\
+	即：
+	\begin{equation*}
+	E=\frac{FL}{S\Delta L}
+	\end{equation*}
+	\par 但金属的样式模量$E$通常很大，因此$\Delta L$十分微小难以测量，故需要用\textbf{放大法}的测量技术。若微小变化量用$\Delta L$表示放大后的测量值为$N$，则：
+	\begin{equation*}
+		A=\frac{N}{\Delta L}
+	\end{equation*}
+	\par $A$为放大器的\textbf{放大倍数}，倍数越大，越有利于测量；倍数越小，信号失真量越小。本实验中所使用的A款杨氏模量测定仪使用的光杠杆属于光放大技术,对金属丝的长度进行了两次放大。此时$E$的表达式为
+	\begin{equation}
+		E=A\frac{FL}{SN}
+	\end{equation}
+
+
+	
+	\subsubsection*{B款杨氏模量测量仪}
+		\begin{figure}[h]
+			\centering
+		\includegraphics[width=0.7\linewidth]{figures/picture2.png}
+		\caption{光杠杆放大原理} %caption是图片的标题
+
+		
+	\end{figure}
+	\par 图1为光杠杆的原理图，$B$为两平面镜的距离，$b$是光杠杆常量。当物体长度改变了$\Delta L$时，反射镜的角度改变了$\Delta\theta$,标尺光线经过光杠杆的两次反射和在辅助反射镜上的一次反射后到达标尺$P_3$处，放大后的钢丝伸长量即为$|P_3-P_0|$.,可知
+	\[\Delta h = |P_3-P_0| = Btan4\theta+Btan2\theta+Btan2\theta\]
+
+	\par 当$\theta\to0$时，可作近似$tan\theta\approx\theta=\dfrac{\Delta L}{b}$,带入则有
+	\[\Delta L = \dfrac{b\Delta h}{8B}\]
+	\par 
+	\par 其中$\dfrac{8B}{b}$为放大倍数，注意：等式成立的条件为：$\theta\to0$将上述式子带入$(2)$式，并利用$S=\pi R^2$和$F = mg$,可得$E$的测量结果为
+	\begin{equation}
+		E=\frac{32BLmg}{\pi D^2b\Delta h}
+	\end{equation}
+
+    
+\subsection*{[实验步骤]}
+	\par 1.将望远镜尺组移动到靠近平面镜的地方，调节望远镜尺组的高度与平面镜等高；移动望远镜尺组，使标尺距平面镜略大于最短视距
+	\par 2.打开灯光，调节平面镜的仰角和标尺高度，使得能在望远镜上方看到标尺的一大一小两个相且望远镜内能看到较小的；调节望远镜的内调焦手轮使成像清晰，记录下分划板准线对应的标尺刻度的初始数值。
+	\par 3.按等时间间隔(两分钟)递加一个砝码。记录下相应读数；等到砝码加完后再按等时间间隔递减一个砝码，再次记录下相应读数。 保持伸长仪和光杆杆不动，用卷尺测量出平面镜间距和金属丝长度；用螺旋测微器在金属丝三个不同位置测量两次直径；将光杠杆放在平纸上，轻印三足之痕迹，然后用游标卡尺测量痕迹间距离。
+	
+    
+\subsection*{[数据处理]}
+	
+
+\subsubsection*{处理$B$,$L$,$b$}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		平面镜间距$B$ /cm & 金属丝原长$L$ /cm & 光杠杆常量$b$ /cm   \\ \hline
+		79.90     & 37.90   & 4.50  \\ \hline
+	\end{tabular}
+	\caption{$B$,$L$,$b$的测量值}
+\end{table}
+
+\[\mu_{b}=0.02mm \quad\mu_L = \frac{0.5}{3}mm \quad\mu_B = \frac{0.5}{3}mm\]
+
+\subsubsection*{处理伸长量$\Delta$ h}
+
+\begin{table}[htbp]
+\centering
+\caption{砝码加载与减载数据}
+\begin{tabular}{cccc}
+\toprule
+砝码数量 & 加载/cm & 减载/cm & 平均/cm \\
+\midrule
+3 & 2.70 & 2.65 & 2.675 \\
+4 & 3.30 & 3.30 & 3.300 \\
+5 & 3.85 & 3.85 & 3.850 \\
+6 & 4.40 & 4.45 & 4.425 \\
+7 & 5.00 & 5.05 & 5.025 \\
+8 & 5.60 & 5.70 & 5.650 \\
+9 & 6.25 & 6.35 & 6.300 \\
+10 & 6.85 & 6.95 & 6.900 \\
+11 & 7.45 & 7.50 & 7.475 \\
+12 & 8.00 & 8.00 & 8.000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+由于杠杆放大效应，本实验中的每个砝码的质量等效为1kg
+
+通过环差法计算得到$\Delta h $ 如下表
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|l|}
+	\hline
+	& 1     & 2        & 3        & 4   & 5     & 均值       \\ \hline
+	$\Delta h$计算值/cm & 2.975 & 3.000 & 3.050 & 3.050 & 2.975 & 3.010 \\ \hline
+\end{tabular}
+\caption{$\Delta h$的计算值}
+\end{table}
+
+\par 1.$\Delta h $的$A$类不确定度$\mu_{a\Delta H}$公式为
+
+\[ \mu_{a\Delta H}=t_{(0.683,4)}\cdot\frac{\sqrt{\sum_{i=1}^{n=5}(\Delta H_i-\overline{\Delta H})^2}}{\sqrt{n}\cdot\sqrt{n-1}}\]
+
+
+\par 带入$\overline{\Delta H}=0.0301cm$,\quad$t_{(0.683,4)}=1.14$后计算得到:
+
+\begin{align*}
+	\mu_{a\Delta H}
+	\approx0.017cm    
+\end{align*}
+\par 2.$\Delta H$的$B$类不确定度为$\mu_{b\Delta H}=\dfrac{0.01}{\sqrt{3}}cm$，从而合成$\Delta H$的不确定度：
+\[\mu_{\Delta H}=\sqrt{\mu_{a\Delta H}^2+\mu_{b\Delta H}^2}=\sqrt{0.017^2  +\frac{10^{-4}}{3}}\approx 0.017\quad(cm)\]
+
+
+\subsubsection*{处理金属丝直径$D$}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l|l|l|l|l|l|l|l|}
+	\hline
+	测量次数 & 1     & 2     & 3     & 4     & 5     & 6     & 平均值$\overline{D}$      \\ \hline
+	D/mm & 0.785 & 0.785 & 0.787 & 0.786 & 0.786 & 0.785 & 0.7858 \\ \hline
+	\end{tabular}
+\caption{金属丝直径$D$的测量值}
+\end{table}
+\par 1.$D$的$A$类不确定度$\mu_{aD}$公式为
+\[ \mu_{aD}=t_{(0.683,5)}\cdot\frac{\sqrt{\sum_{i=1}^{n=6}(D_i-\overline{D})^2}}{\sqrt{n}\cdot\sqrt{n-1}}\]
+\par 带入$\overline{D}=0.810$,\quad$t_{(0.683,5)}=1.11$后计算得到:
+\begin{align*}
+	\mu_{aD}=0.0003\quad (mm)
+\end{align*}
+\par 2.$D$的$B$类不确定度$\mu_{bD}=\dfrac{0.001}{\sqrt{3}}mm$，从而合成
+\begin{align*}
+	\mu_D &= \sqrt{\mu_{aD}^2+\mu_{bD}^2} = \sqrt{0.0003^2+\left(\frac{0.001}{\sqrt{3}}\right)^2}\approx0.0006  \quad (mm)
+\end{align*}
+\subsubsection*{$E$的不确定度}
+\[E=\frac{32mgBL}{\pi bD^2\Delta L}\]
+\par 带入数据后:
+
+\[\overline{E} = \frac{32\times5.000\times9.801\times0.7990\times0.3790}{\pi\times0.0450\times(0.7856\times 10^{-3})^2\times0.0301}\approx1.807\times10^{11}\]
+$E$的不确定度公式为：
+\[	\mu_E = \overline{E}\cdot\sqrt{\left(\frac{\mu_{\Delta L}}{\Delta \overline{L} }\right)^2+\left(\frac{2\mu_{D}}{\overline{D} }\right)^2+\left(\frac{\mu_{B }}{\overline{B} }\right)^2+\left(\frac{\mu_{b}}{\overline{b} }\right)^2+\left(\frac{\mu_{L}}{\overline{L} }\right)^2}\\\]
+
+带入数值得到
+
+\begin{align*}
+	\mu_E=0.01110303862\times10^{11}\approx0.011\times10^{11}
+\end{align*}
+\par 故$E$的值为
+\[E = (1.807\pm0.011)\times10^{11}\quad (N/m^2)\] 
+
+\newpage
+\subsection*{[附录]}
+
+\begin{figure}[!h]
+			\centering
+		\includegraphics[width=0.7\linewidth]{杨氏模量/figures/原始数据.jpg}
+		\caption{实验数据} %caption是图片的标题
+
+		
+	\end{figure}
+
+
+\end{document}

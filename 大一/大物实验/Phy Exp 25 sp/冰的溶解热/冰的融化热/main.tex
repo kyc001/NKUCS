@@ -1,0 +1,242 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+%设置页边距
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\usepackage{wrapfig}
+%需要用到的扩展包
+\usepackage{xeCJK,amsmath,paralist,enumerate,booktabs,multirow,graphicx,float,subfig,setspace,listings,lastpage,hyperref}
+\usepackage{fancyhdr}
+\usepackage{siunitx}
+
+\pagestyle{fancy}
+\rhead{用混合量热法测定冰的溶化热}
+\lhead{大学基础物理实验报告}
+\rfoot{2025年6月3日}
+
+
+
+
+
+
+
+%报告开始
+\begin{document}
+	%设置课程标题
+	\begin{center}
+		\heiti\LARGE{《大学基础物理实验》课程实验报告}
+	\end{center}
+	
+	
+	
+	
+	%设置实验人信息以及实验时间表格
+	
+	
+		\begin{center}
+			\begin{tabular}{lcr}
+				
+				{\songti 姓名：柯云超  \quad 学号: 2413575}\\
+				{\songti  学院：计算机学院 \quad 时间：2025年6月3日 \quad 组别: L组11号}\\
+				
+				
+			\end{tabular}
+		\end{center}
+	\vspace{-0.2cm}
+	{\noindent}	 \rule[-10pt]{16cm}{0.05em}\\
+
+	\vspace{-0.4cm}
+
+
+	%实验题目
+	\begin{center}
+		\LARGE\textbf{用混合量热法测定冰的溶化热}
+	\end{center}
+    
+	
+\subsection*{[实验目的]}
+1.正确使用量热器，熟练使用温度计
+
+2.用混合量热法测定冰的熔化热
+
+3.进行实验安排和参量选取
+
+4.学会一种粗略修正散热的方法------抵偿法
+
+
+
+\subsection*{[实验器材]}
+\par 量热器，温度计，电子天平，秒表，玻璃皿，干布，保温桶，冰以及热水等。
+
+\subsection*{[实验原理]}
+
+设法制造一个与外界无热量交换的孤立系统C（只包含冰块A与已知热容的系统B），满足热平衡方程如下：
+
+\[Q_\text{吸}=Q_\text{放}\]
+对于B，则有
+\[Q=C_s\mathrm{\Delta\theta}\]
+
+质量$m_i$，温度$\theta_0^\prime$（本次实验为0度） 的冰块与质量m，温度$\theta_1$的水相结合，冰全部熔化为水，测得平衡温度为$\theta_2$。假定量热容器内筒与搅拌器的质量分别为$m_1，m_2$，其比热容分别为$c_1，c_2$，数字式温度计的测温传感器（铂电阻测温探头）比热容很小，可以忽略不计；水和冰的比热容分别为c和$c_i$(其中水的比热容为$c=4.1868kJ\cdot\ kg^{-1}\cdot\ K^{-1} ，c_i=1.8kJ\cdot\ kg^{-1}\cdot\ K^{-1})$；记冰的熔点为$\theta_0$，本次实验$\theta_0$为0摄氏度.
+
+可以得到：
+
+\begin{equation}
+   L=\frac{1}{m_i}\left(cm+c_1m_1+c_2m_2\right)\left(\theta_1-\theta_2\right)-c\theta_2 
+\end{equation}
+
+为减少与外界热交换带来的实验误差，我们以抵偿法作为的散热修正方法。原理如下
+
+设环境温度为$\theta_e$，当系统的温度高于环境温度时，它就要散失热量。由当温差较小(一般不超过15 K)时，（非自然对流）系统的散热制冷速率与温差成正比，此时牛顿冷却定律表示为：
+
+\begin{equation}
+    \frac{dq}{dx}=-k\left(\theta-\theta_e\right)
+\end{equation}
+
+整个过程的温度变化曲线如下：
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics*[width=0.6\textwidth]{img1.jpg}
+\end{figure}
+
+如果使\[S_A=S_B\]则前后热交换相抵消，则在这个过程中可以近似视为孤立系统
+
+总而言之，我们可知通过适当地选择参数，使曲线与环境温度$\theta=\theta_e$,直线围成的两块面积近似相等，就可以使系统很好地近似为一个孤立系统。
+
+\subsection*{[实验步骤]}
+
+
+\begin{enumerate}
+    \item 使用温度计与电子天平测量环境温度\(\theta_{e}\) ，以及内桶质量\(m_1\)和搅拌器质量\(m_2\) 。
+    \item 向内筒中倒入适量的温水（水温比环境温度高约\(10\)到\(15\)摄氏度最好），测量\(m + m_1+m_2\) 。 
+    \item 将量热桶放入装置，盖好盖子 ，持续监测温度\(4\)分钟，每分钟记录一次温度数值。 
+    \item 准备冰块，用干布擦去冰表面的水分，在第\(5\)分钟时将冰块投入内筒，迅速盖上盖子并搅拌，每\(10\)秒钟测量一次温度，直至系统温度开始上升。测量搅拌器、量热器和冰与水的总质量\(m + m_1+m_2 + m_i\)  。 
+    \item 绘制\(\theta - t\)曲线，据此求出冰的溶解热，重复上述步骤三次
+\end{enumerate}
+
+\subsection*{[数据处理]}
+
+记录得到如下数据，其中0 - 240s是单独测水温的变化，300s是投入冰块的时刻。
+
+\renewcommand{\arraystretch}{1.2}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+时间 & 温度 & 时间 & 温度 & 时间 & 温度 & 时间 & 温度 \\
+\hline
+0s & 36.7℃ & 340s & 31.4℃ & 430s & 25.5℃ & 520s & 24.4℃ \\
+\hline
+60s & 36.4℃ & 350s & 30.2℃ & 440s & 25.4℃ & 530s & 24.3℃ \\
+\hline
+120s & 36.3℃ & 360s & 29.1℃ & 450s & 25.4℃ & 540s & 24.3℃ \\
+\hline
+180s & 36.2℃ & 370s & 28.2℃ & 460s & 25.2℃ & 550s & 24.3℃ \\
+\hline
+240s & 36.0℃ & 380s & 27.5℃ & 470s & 25.0℃ & 560s & 24.3℃ \\
+\hline
+300s & 35.9℃ & 390s & 26.9℃ & 480s & 24.9℃ & 570s & 24.3℃ \\
+\hline
+310s & 34.7℃ & 400s & 26.5℃ &490s & 24.7℃ & 580s & 24.3℃ \\
+\hline
+320s & 33.6℃ & 410s & 26.0℃ & 500s & 24.6℃ & 590s & 24.3℃ \\
+\hline
+330s & 32.6℃ & 420s & 25.6℃ & 510s & 24.5℃ & 600s & 24.3℃ \\
+\hline
+
+\hline
+\end{tabular}
+\label{tab:measurement}
+\end{table}
+
+使用python对于上述数据进行绘制得到Figure1.如下
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics*[width=0.95\textwidth]{Figure_1.png}
+\end{figure}
+
+其中灰色点代表原始数据，曲线代表拟合曲线。紫色虚线表示室温，紫色与绿色表示曲线与室温直线所围城的面积
+
+通过观察，取紫色部分与绿色部分，二者面积相近。可以将系统近似视为孤立系统。可以得到
+$\theta_2=24.3$摄氏度.
+
+而其他测量数据如下：
+
+\begin{align*}
+        \begin{aligned}
+        m_2=8.64g\\
+        m_1+m_2=116.30g\\
+        m_1+m_2+m=344.57g\\
+        m_1+m_2+m+m_i=361.77g \\
+        \end{aligned}
+\end{align*}
+
+再其他数据带入公式公式(1)得到\[L_\text{测}\approx3.167\times10^5Jkg^{-1}\]
+
+而\[L_\text{0}=3.248\times10^5Jkg^{-1}\]
+
+计算得到的误差为
+
+\[\eta=\left|\frac{L_{测}-L_0}{L_0}\right|\times100％\approx2.5\%\]
+
+\subsection*{[误差分析]}
+
+经过测量发现与真实值存在一定的误差，分析原因可能有以下几个：
+
+1.放入冰块时，由于操作不熟练，导致放入冰块所花时间较长，可能有一部分热量散失了。但是L偏小
+
+2.图像中S1与S2的面积可能不是严格相等的，而是S1略大。即有一部分热量散失了。导致L偏小。
+
+3.冰块未完全处于熔点（0℃），融化时需先吸收热量升温，若实验模型假设冰块初始温度为 0℃，则会低估实际所需热量 Q，导致 L 偏小。
+
+\subsection*{[思考题]}
+\begin{enumerate}
+    % 题目1
+    \item 假如冰内有①气泡、②小水泡、③杂质，它们分别对实验结果有无影响？为什么？
+    \begin{itemize}
+        \item 气泡：有影响。冰熔化后气泡逸出，测量的冰质量（含气泡体积对应的“虚假”质量 ）大于实际参与熔化的冰质量。根据 \( Q = mL \)（\( Q \) 为熔化吸热，\( m \) 为冰质量，\( L \) 为熔化热 ），\( m \) 偏大，计算出的 \( L \) 偏小 。
+        \item 小水泡：有影响。小水泡内水是“提前存在的液态水”，使冰熔化需吸收的热量测量值偏小（部分热量并非用于冰熔化为水 ）。由 \( L = Q/m \)，\( Q \) 偏小、\( m \) 含小水泡对应冰的“虚假”质量，会导致计算的 \( L \) 偏小 。 
+        \item 杂质：若杂质不参与热交换，测量的冰质量（含杂质 ）大于实际冰质量，根据 \( L = Q/m \)，\( m \) 偏大，\( L \) 偏小；若杂质参与热交换（如熔化吸热 ），会使 \( Q \) 测量偏大，\( L \) 可能偏大，一般实验未考虑杂质热性质时，多使 \( L \) 测量不准确，常因冰质量测量易偏大导致 \( L \) 偏小 。 
+    \end{itemize}
+
+    % 题目2
+    \item 如果冰中含水量为 \( x\% \)，试求由此引起冰熔化热 \( L \) 的相对误差。
+
+    
+         设冰质量为 \( m \)，纯冰熔化热 \( L_0 \)，含 \( x\% \) 水的冰可视为 \( m(1 - x\%) \) 冰与 \( mx\% \) 水。实际冰熔化吸热 \( Q = m(1 - x\%)L_0 \)，测量时按总质量 \( m \) 算，得 \( L = \frac{Q}{m} = (1 - x\%)L_0 \) 。
+        
+         相对误差 \( \eta = \frac{|L - L_0|}{L_0} = \frac{|(1 - x\%)L_0 - L_0|}{L_0} = x\% \)（理想情况，假设水不影响吸热测量 ）。 
+
+
+    % 题目3
+    \item 若给定 \( L_0 = 3.341×10^5 \, \mathrm{J·kg^{-1}} \)，试求 \( L \) 的定值误差。
+
+    
+\[
+|\Delta L| = |L_{\text{测}} - L_0|
+\]
+代入数据：
+\[
+|\Delta L| = |3.167 \times 10^5 - 3.248 \times 10^5| = 8.1 \times 10^3 \, \text{J/kg}
+\]
+
+\[
+\delta = \left| \frac{L_{\text{测}} - L_0}{L_0} \right| \times 100\%
+\]
+代入数据：
+\[
+\delta = \left| \frac{3.167 \times 10^5 - 3.248 \times 10^5}{3.248 \times 10^5} \right| \times 100\% = \frac{8.1 \times 10^3}{3.248 \times 10^5} \times 100\% \approx 2.49\%
+\]
+\end{enumerate}
+\section*{附录}
+
+原始实验数据：
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics*[width=0.95\textwidth]{data.jpg}
+\end{figure}
+
+
+\end{document}

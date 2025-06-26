@@ -1,0 +1,244 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+
+
+
+
+%设置页边距
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+
+\usepackage{subcaption} % 用于添加子标题和并排排版表格
+\usepackage{booktabs} % 提供更美观的表格线，这里可根据实际情况选择是否保留
+
+%需要用到的扩展包
+\usepackage{xeCJK,amsmath,paralist,enumerate,booktabs,multirow,graphicx,float,subfig,setspace,listings,lastpage,hyperref}
+\usepackage{fancyhdr}
+
+
+
+
+%设置页眉页脚以及页码
+\pagestyle{fancy}
+\rhead{伏安法测定电阻}
+\lhead{大学基础物理实验报告}
+
+\rfoot{2025 年 3 月 25 日}
+
+
+
+
+%报告中用到的图片存放在这个tex文件所在目录中的figures子目录中
+\graphicspath{{figures/}}
+
+
+
+
+
+
+
+
+
+%报告开始
+\begin{document}
+	
+	
+	
+	
+	%设置课程标题
+	\begin{center}
+		\heiti\LARGE{《大学基础物理实验》课程实验报告}
+	\end{center}
+	
+	
+	
+	
+	%设置实验人信息以及实验时间表格
+
+
+		\begin{center}
+			\begin{tabular}{lcr}
+				
+				{\songti 姓名：柯云超  \quad 学号: 2413575}\\
+				{\songti  学院：计算机学院 \quad 时间：2025年3月25日 \quad 组别: L组11号}\\
+				
+				
+			\end{tabular}
+		\end{center}
+	\vspace{-0.2cm}
+	{\noindent}	 \rule[-10pt]{16cm}{0.05em}\\
+
+	\vspace{-0.4cm}
+	
+	
+	
+	
+	
+	
+	%实验题目
+	\begin{center}
+		\LARGE\textbf{伏安法测定电阻}
+	\end{center}
+	
+
+	
+	%实验原理
+	\subsection*{[实验原理]}
+	\subsubsection*{线性元件和非线性元件}
+	\par 伏安特性曲线是以电流$U$为横坐标，电压$I$为纵坐标作出的I-U图。通常情况下，导电金属丝，碳膜电阻，金属膜电阻等的伏安特性曲线是一条直线，称其为线性元件;二极管等元件的伏安特性曲线不是一条直线，这类元件称为非线性元件。
+	\vspace{0.2cm}
+	\begin{figure}[htbp]
+		\centering
+		\begin{minipage}[t]{0.48\textwidth}
+			\centering
+			\includegraphics[width=5cm]{线性元件}
+			\caption{线性元件}
+		\end{minipage}
+		\begin{minipage}[t]{0.48\textwidth}
+			\centering
+			\includegraphics[width=5cm]{非线性元件}
+			\caption{非线性元件}
+		\end{minipage}
+	\end{figure}
+	\vspace{-0.8cm}
+	\subsubsection*{测量电路}
+	\par 本实验中测量电路分为两种：分压式和限流式，本次实验选择分压电路,电压表内接
+		\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.48\textwidth}
+			\centering
+			\includegraphics[width=6cm]{分压电路}
+			\caption*{(a)分压电路}
+		\end{minipage}
+		\begin{minipage}[t]{0.48\textwidth}
+			\centering
+			\includegraphics[width=6cm]{限流电路}
+			\caption*{(b)限流电路}
+		\end{minipage}
+	\caption{测量电路选取}
+	\end{figure}
+	\vspace{0.2cm}
+	
+
+
+	\subsection*{[主要仪器品牌与型号]}
+	\par 直流稳压电源
+	\par 台式万用表：GDM8342
+	\par 手持万用表：VT61B
+	\par 滑动变阻器：BX7-11
+	\vspace{0.2cm}
+
+
+
+
+        \subsection*{[万用表测量数据]}
+	\par 金属膜电阻$R_x$阻值:109.1$\Omega$
+	\par 直流稳压电源输出电压:1.49$V$
+	\par 正向$PN$结电压:0.385mV
+        \par 电表内阻$R_V = 10M\Omega$,  $R_A = 2\Omega$, 电压表应内接
+
+	\vspace{0.2cm}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	%实验内容与分析
+	\subsection*{[伏安法测量数据]}
+	\par 实验测量数据如下
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+        \hline
+        $U(V)$ & 0.0055 & 0.0723 & 0.2110 & 0.2277 & 0.3918 & 0.4382 \\
+        \hline
+        $I(mA)$ & 0.04 & 0.66 & 1.93 & 2.09 & 3.56 & 3.92 \\
+        \hline
+        $U(V)$ & 0.4686 & 0.5640 & 0.7081 & 0.9434 & 1.1782 & 1.4032 \\
+        \hline
+        $I(mA)$ & 4.29 & 5.16 & 6.49 & 8.63 & 10.87 & 12.85 \\
+        \hline
+    \end{tabular}
+        \caption{金属膜电阻原始数据}
+\end{table}
+
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+        \hline
+        $U(V)$ & 0.0150 & 0.1451 & 0.2308 & 0.3104 & 0.4653 & 0.5440 \\
+        \hline
+        $I(mA)$ & 0.00 & 0.00 & 0.00 & 0.01 & 0.23 & 1.73 \\
+        \hline
+        $U(V)$ & 0.5851 & 0.6046 & 0.6399 & 0.6552 & 0.6775 & 0.7056 \\
+        \hline
+        $I(mA)$ & 4.00 & 5.72 & 10.44 & 13.47 & 19.42 & 31.92 \\
+        \hline
+    \end{tabular}
+        \caption{二极管原始数据}
+\end{table}
+
+	\vspace*{-0.6cm}
+
+         \newpage
+   
+	\subsection*{[数据处理]}
+        \par 使用Python绘制伏安特性曲线如下.
+            \begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{figures/金属膜电阻.png}
+		\caption{线性电阻直线拟合}
+            \end{figure}
+            \begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{figures/二极管.png}
+		\caption{非线性电阻直线拟合}
+            \end{figure}
+
+	\subsubsection*{金属膜电阻数据处理}
+	\par 选取直线上距离最远的两个点，带入公式
+	\[\overline{R_x}=\frac{U_2-U_1}{I_2-I_1-\dfrac{U_2-U_1}{R_V}}
+	\]
+	\par 计算得$\overline{R}_x=\dfrac{1.40-0.01}{12.85-0.04-\dfrac{1.40-0.01}{10^7}}\times1000\approx108.51\Omega$
+        
+        \par 下面进行误差分析:
+	\par 首先计算仪表误差：
+	\[\Delta U = \pm (0.0002*1.40+4*0.0001) \]
+	\[\Delta I = \pm (0.012*12.85+3*0.01) \]
+	\par 计算相对误差$\rho_x$
+	\[\rho_x=\sqrt{\rho_V^2+\rho_z^2}=\sqrt{\left(\frac{\Delta U}{U_2-U_1}\right)^2+\left(\frac{\Delta I}{I_2-I_1}\right)^2}=0.014\]
+	\par 则误差为$\Delta R = \overline{R}_x\times \rho_x = 1.52\Omega$,求得最终结果为
+	\[R_x = (108.51\pm 1.52)\Omega \]
+    
+	\subsubsection*{二极管数据处理}
+	\par 从图中读取数据,根据有效位数"多取一位"原则,保留三位有效数字。
+	\par ($a$) 在2.00mA下的阻值为$\frac{0.5507}{2}*1000 = 275 \Omega$
+	\par ($b$) 在8.00mA下的阻值为$\frac{0.6241}{8}*1000 = 78.0\Omega$
+
+    
+	\subsection*{[思考题]}
+	
+
+            分析：三个元件的阻值数量级差别都很大，在现有条件下无论选择怎样的方法都会造成较大的误差。
+
+
+            \begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{figures/思考题2.png}
+		\caption{思考题2}
+            \end{figure}
+
+            
+            按照图中的方法，可以先断开开关，根据$(100+R_G)I_{G1}=U$先求得电路总电压，然后合上开关，利用$\frac{U-I_{G2}R_G}{100}-I_{G2}=\frac{I_{G2}R_G}{R_x}$求得$R_x$。
+	
+	
+	
+	
+	
+
+
+\end{document}
